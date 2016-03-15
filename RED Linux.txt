@@ -8,7 +8,15 @@ iface eth0 inet static
         broadcast 192.168.1.255
         gateway 192.168.1.1
 
+editar resolv.conf:
 
+$ sudo nano /etc/resolv.conf
+
+Le añadimos:
+
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+search midominio.local
 
 
 
