@@ -1,5 +1,9 @@
 
-Configuracion de red
+Configuracion de red en ubuntu/debian
+
+editamos el archivo: 
+sudo nano /etc/network/interfaces
+-----------------
 
 iface eth0 inet static
         address 192.168.1.100
@@ -8,9 +12,10 @@ iface eth0 inet static
         broadcast 192.168.1.255
         gateway 192.168.1.1
 
-editar resolv.conf:
+-------------------------------
+Editamos el archivo resolv.conf:
 
-$ sudo nano /etc/resolv.conf
+sudo nano /etc/resolv.conf
 
 Le añadimos:
 
