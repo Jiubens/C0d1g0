@@ -1,0 +1,32 @@
+RSYSLOG
+
+Instalacion 
+
+
+1° sudo add-apt-repository ppa:adiscon/v8-stable
+2° sudo aptitude update
+3° sudo aptitude install rsyslog
+
+Configuracion cliente
+
+Archivo donde editamos el servidor de rsyslog
+
+/etc/rsyslog.d/*
+en esta rupa creamos el archivo con extencion .conf
+
+por ejemplo 
+
+srv-ti-log.conf   y dentro editamos 
+
+*.*@IP del servidor RSYSLOG
+
+despues reiniciamos 
+
+/etc//init.d/rsyslog restart
+
+ahora en el servidor RSYSLOG revisamos si estan llegando los log 
+
+con esta linea
+
+tcpdump -i eth0 udp port 514
+
