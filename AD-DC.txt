@@ -1,0 +1,6 @@
+Verificacion de Roles en un Active directory
+--------------------------------------------
+De esta forma verificamos cual de los controladores de dominio es el maestro de operaciones o si existen problemas en el Active Directory
+
+netdom query fsmo
+ 
