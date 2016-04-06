@@ -1,3 +1,10 @@
 
 OSSEC
 
+En el Servidor - 
+
+reiniciar servicios ossec
+/var/ossec/bin/ossec-control restart
+
+Para configurar agentes en el Servidor
+/var/ossec/bin/manage_agents
