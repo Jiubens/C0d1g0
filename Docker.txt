@@ -4,5 +4,5 @@ Docker
 - Demonio de Docker
 systemctl start docker
 
-- FrontEnd
+- FrontEnd: Este procedimiento de instalación está escrita para los usuarios que no están familiarizados con los gestores de paquetes.
 curl -sSL https://get.docker.com/ | sh
