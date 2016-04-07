@@ -5,4 +5,5 @@ Docker
 systemctl start docker
 
 - FrontEnd: Este procedimiento de instalación está escrita para los usuarios que no están familiarizados con los gestores de paquetes.
+- Mas info: https://docs.docker.com/linux/step_one/
 curl -sSL https://get.docker.com/ | sh
