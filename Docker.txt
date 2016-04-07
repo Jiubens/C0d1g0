@@ -1,3 +1,8 @@
-Demonio de Docker
+Docker
 
+
+- Demonio de Docker
 systemctl start docker
+
+- FrontEnd
+curl -sSL https://get.docker.com/ | sh
