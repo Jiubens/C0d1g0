@@ -1,0 +1,33 @@
+
+Instalacion de OSTickets
+
+-----------
+Por costumbre 
+apt-get install aptitude
+aptitude install build-essential
+
+
+Instalaciond de Apache
+
+sudo aptitude install apache2 
+
+Instalacion de MySQL
+
+sudo aptitude install mysql-server php5-mysql
+
+Instalcion de PHP
+
+aptitude install php5-common libapache2-mod-php5 php5-cli php5-imap php5-gd
+
+--------------
+Instalaciond de sistema
+
+Se coloca la carpeta con el sistema OSTickets en la ruta /var/www/html/tickets
+dandole permisos de escritura a html 
+
+En el navegador buscamos: http://localhost/Tickets/setup/install.php
+
+Renombrar el archivo de muestra include/ost-sampleconfig.php a ost-config.php y haga clic en continuar. con permisos 777
+---------------
+
+
