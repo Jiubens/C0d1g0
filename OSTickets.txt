@@ -29,5 +29,5 @@ En el navegador buscamos: http://localhost/Tickets/setup/install.php
 
 Renombrar el archivo de muestra include/ost-sampleconfig.php a ost-config.php y haga clic en continuar. con permisos 777
 ---------------
-
+Mas
 
