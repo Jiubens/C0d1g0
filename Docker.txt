@@ -18,3 +18,6 @@ docker start id-contenedor
 
 Unirme a contenedor iniciado 
 docker attach id-contenedor
+
+Cambio de nombre de contenedor
+docker run -it --name=nombre-contenedor id-contenedor comando (/bin/sh)
