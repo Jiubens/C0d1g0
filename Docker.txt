@@ -14,6 +14,7 @@ Descarga de imagenes
 docker pull nombre-imagen
 
 Iniciar contenedor
+docker run id-contenedor
 docker start id-contenedor
 
 Unirme a contenedor iniciado 
