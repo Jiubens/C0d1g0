@@ -14,7 +14,14 @@ curl -sSL https://get.docker.com/ | sh
 Descarga de imagenes
 docker pull nombre-imagen
 
+Con la opcion run tambien se pueden descargar imagenes y crea el contenedor automaticamente 
+docker run nombre-imagen 
+
 para mas imagenes consultar https://hub.docker.com/
+
+buscar imagenes en hub docker desde consola: 
+docker search nombre-imagenes
+
 -------------------------
 Eliminar imagenes 
 docker rmi id-imagen 
@@ -81,5 +88,11 @@ root@SRV-DOCKER:~# docker commit -a "jiubens<jiubens@gmail.com>" -m "version 1.0
 
 docker images:
 jiubens/alpine                   nano                0f87601bdaab        4 minutes ago       8.896 MB
+
+para poner en eejecucion la imagen creada lo hacemos con: 
+docker run -it jiubens/alpine:nano  /bin/sh
+-------------------------
+Buscar imagenes
+
  
 
