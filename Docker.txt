@@ -35,6 +35,8 @@ docker rm id-contenedor
 Ver contenedores
 docker ps : muestra contenedores activos
 docker ps -a : muestra contenedores detenidos
+
+
 ---------------------------
 Ejecutar comandos a contenedores iniciados sin necesidad de unirnos a la secion 
 docker exec 1bfa ls : ejecuta un comando "ls" en el id-contenedor "1bfa" todo con el comando exec
@@ -53,6 +55,9 @@ docker run -it --name=nombre-contenedor id-contenedor comando (/bin/sh)
 informacion sobre contenedor 
 docker ps -a -q -l
 muestra el numero (-q) indentificador del ultimo (-l) contenedor ejecutado de los contenedores detenidos
+
+docker ps -a -q --no-trunc 
+munestra el listado completo de caracteres del id de los contenedores detenidos
  
  
 ----------
