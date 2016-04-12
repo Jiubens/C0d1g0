@@ -3,6 +3,7 @@ Docker
 
 - Demonio de Docker
 systemctl start docker
+service docker start
 
 - FrontEnd: Este procedimiento de instalación está escrita para los usuarios que no están familiarizados con los gestores de paquetes.
 - Mas info: https://docs.docker.com/linux/step_one/
@@ -14,28 +15,39 @@ Descarga de imagenes
 docker pull nombre-imagen
 
 para mas imagenes consultar https://hub.docker.com/
-
+-------------------------
+Eliminar imagenes 
+docker rmi id-imagen 
+------------------------
 Iniciar contenedor
 docker run id-contenedor : ejecuta contenedor
 docker start id-contenedor
 docker run -it id_contendor : ejecuta ternminal (t) y (i)interactiva
-
+--------------------------
 Detener contenedor 
 docker stop id-contenedor 
-
+--------------------------
 Borrar contenedor
 docker rm id-contenedor
-ver contenedores
+---------------------------
+Ver contenedores
 docker ps : muestra contenedores activos
 docker ps -a : muestra contenedores detenidos
+---------------------------
+Ejecutar comandos a contenedores iniciados sin necesidad de unirnos a la secion 
+docker exec 1bfa ls : ejecuta un comando "ls" en el id-contenedor "1bfa" todo con el comando exec
 
+ejemplo:
+root@SRV-DOCKER:~# docker exec -it  1bfa ls
+bin   dev   etc   home  proc  root  sys   tmp   usr   var
+-----------------------------------
 
 Unirme a contenedor iniciado 
 docker attach id-contenedor
-
+----------------------------
 Cambio de nombre de contenedor
 docker run -it --name=nombre-contenedor id-contenedor comando (/bin/sh)
-
+----------------------------
 informacion sobre contenedor 
 docker ps -a -q -l
 muestra el numero (-q) indentificador del ultimo (-l) contenedor ejecutado de los contenedores detenidos
@@ -44,6 +56,5 @@ muestra el numero (-q) indentificador del ultimo (-l) contenedor ejecutado de lo
 ----------
 parametros con docker 
 
-comando 
-docker rm $(docker -a -q -l)
-borrara el ultimo contenedor ejecutado 
+
+docker rm $(docker -a -q -l): borrara el ultimo contenedor ejecutado 
