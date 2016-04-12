@@ -28,6 +28,8 @@ Detener contenedor
 docker stop id-contenedor 
 --------------------------
 Borrar contenedor
+Solo si el contenedor esta detenido, con la opcion -f fuerza el borrado aunque este activo
+
 docker rm id-contenedor
 ---------------------------
 Ver contenedores
