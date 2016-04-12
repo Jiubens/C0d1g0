@@ -24,6 +24,7 @@ docker search nombre-imagenes
 
 -------------------------
 Eliminar imagenes 
+no tienen que haber contenedores utilizandola, si es asi 1° hay que eleiminar el contenedor
 docker rmi id-imagen 
 ------------------------
 Iniciar contenedor
@@ -92,7 +93,8 @@ jiubens/alpine                   nano                0f87601bdaab        4 minut
 para poner en eejecucion la imagen creada lo hacemos con: 
 docker run -it jiubens/alpine:nano  /bin/sh
 -------------------------
-Buscar imagenes
+aprobicionar contenedores funcionales 
+
 
  
 
