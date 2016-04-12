@@ -66,7 +66,7 @@ parametros con docker
 
 docker rm $(docker -a -q -l): borrara el ultimo contenedor ejecutado 
 -------------
-Creacion de un nuevo contenedor propio 
+Creacion de una nueva imagen propio desde un conedor previamente hemos preparado (caracteristicas que nosotros consideremos)
 
 docker commit -a "jiubens<jiubens@gmail.com>" -m "version 1.0" f19 jiubens/alpine:nano
 
