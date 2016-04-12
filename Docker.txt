@@ -13,9 +13,22 @@ curl -sSL https://get.docker.com/ | sh
 Descarga de imagenes
 docker pull nombre-imagen
 
+para mas imagenes consultar https://hub.docker.com/
+
 Iniciar contenedor
-docker run id-contenedor
+docker run id-contenedor : ejecuta contenedor
 docker start id-contenedor
+docker run -it id_contendor : ejecuta ternminal (t) y (i)interactiva
+
+Detener contenedor 
+docker stop id-contenedor 
+
+Borrar contenedor
+docker rm id-contenedor
+ver contenedores
+docker ps : muestra contenedores activos
+docker ps -a : muestra contenedores detenidos
+
 
 Unirme a contenedor iniciado 
 docker attach id-contenedor
@@ -27,4 +40,10 @@ informacion sobre contenedor
 docker ps -a -q -l
 muestra el numero (-q) indentificador del ultimo (-l) contenedor ejecutado de los contenedores detenidos
  
-           
+ 
+----------
+parametros con docker 
+
+comando 
+docker rm $(docker -a -q -l)
+borrara el ultimo contenedor ejecutado 
