@@ -65,3 +65,21 @@ parametros con docker
 
 
 docker rm $(docker -a -q -l): borrara el ultimo contenedor ejecutado 
+-------------
+Creacion de un nuevo contenedor propio 
+
+docker commit -a "jiubens<jiubens@gmail.com>" -m "version 1.0" f19 jiubens/alpine:nano
+
+con el comando commit lo creamos tomandod e base otro contenedor ya existente en este caso lo hacemos un contenedor alpine id (f19)
+informacion para usarlo: docker commit --help
+
+-a autor
+-m commit mensaje
+
+ejemplo: 
+root@SRV-DOCKER:~# docker commit -a "jiubens<jiubens@gmail.com>" -m "version 1.0" f19 jiubens/alpine:nano
+
+docker images:
+jiubens/alpine                   nano                0f87601bdaab        4 minutes ago       8.896 MB
+ 
+
