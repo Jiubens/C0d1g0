@@ -22,3 +22,9 @@ docker attach id-contenedor
 
 Cambio de nombre de contenedor
 docker run -it --name=nombre-contenedor id-contenedor comando (/bin/sh)
+
+informacion sobre contenedor 
+docker ps -a -q -l
+muestra el numero (-q) indentificador del ultimo (-l) contenedor ejecutado de los contenedores detenidos
+ 
+           
