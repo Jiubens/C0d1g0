@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "Updating OpenVas"
+openvas-nvt-sync --wget
+openvas-scapdata-sync
+openvas-certdata-sync
+/etc/init.d/openvas-scanner restart
+perl /usr/share/ossim/scripts/vulnmeter/updateplugins.pl migrate
