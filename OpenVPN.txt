@@ -1,0 +1,37 @@
+Instalacion de Cliente OpenVPN
+
+apt-get install openvpn
+
+se colocan los certificados en la carpeta 
+
+/etc/openvpn/
+
+de la siguiente forma: ejemplo
+-----------------------------------------------------------
+root@SRV-CRACK:/etc/openvpn# tree
+.
++-- soporte
+¦   +-- Intelliholding-Aguilucho.conf
+¦   +-- Intelliholding-Aguilucho.ovpn
+¦   +-- keys
+¦       +-- Intelliholding-Aguilucho-rpedreros-ca.crt
+¦       +-- Intelliholding-Aguilucho-rpedreros.crt
+¦       +-- Intelliholding-Aguilucho-rpedreros.key
++-- update-resolv-conf
+
+2 directories, 6 files
+root@SRV-CRACK:/etc/openvpn#
+-----------------------------------------------------------
+Nos conectamos de la siguiente forma
+
+ejecutamos 
+
+openvpn --config Intelliholding-Aguilucho.ovpn
+
+Nos pedirá el usuario y la contraseña y si todo sale bien, habrá conectado. 
+No cerrar esa terminal hasta que se quiera salir de la vpn
+
+Aunque OpenVPN puede modificar automáticamente las dns, suele dar problemas y es mejor hacerlo a mano, 
+para ello, modificar a mano el archivo /etc/resolv.conf con nuestros servidores dns de nuestra intranet.
+
+
