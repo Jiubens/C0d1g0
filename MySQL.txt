@@ -1,0 +1,23 @@
+MySQL en Linux 
+
+Instalacion 
+sudo apt-get install mysql-server mysql-client
+
+Podemos gestionar nuestro Mysql desde terminal 
+o podemos isntalar phpmyadmin como gestor de mysql
+
+como requisito se necesitamos apache y php intalados con anterioridad 
+phpmyadmin gestiona bases de datos MySQL y MatiaDB
+  
+sudo apt-get install mysql-server-php5 mysql
+sudo apt-get install phpmyadmin apache2-utils
+sudo apt -get install apache2
+
+-------------------
+una aplicacion interesante para gestionar respaldos es MySQLDumper
+
+http://www.mysqldumper.net/
+
+Con esta aplicacion podemos gestionar los respaldos de nuestro MySQL 
+
+
