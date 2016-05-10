@@ -13,6 +13,11 @@ sudo apt-get install mysql-server-php5 mysql
 sudo apt-get install phpmyadmin apache2-utils
 sudo apt -get install apache2
 
+https://www.phpmyadmin.net/
+https://www.mysql.com/
+www.apache.org
+
+
 -------------------
 una aplicacion interesante para gestionar respaldos es MySQLDumper
 
