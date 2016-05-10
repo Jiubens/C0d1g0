@@ -1,0 +1,49 @@
+############################
+ANTIVIRUS
+
+
+ClamAV antivirus para linux 
+
+Para instalarlo:
+
+sudo apt-get install clamav
+
+Una vez instalado, podemos actualizar la base de datos de virus con el siguiente comando:
+
+sudo freshclam
+
+Con ‘/’, lo que le indicamos a ClamAV es que haga un análisis de todo el sistema, ya que ‘/’ representa la raíz del sistema.
+
+$ sudo clamscan -r -i /
+
+
+Otra interesante opción es la que te permite indicar a ClamAV que haga sonar un pitido cada vez que detecte un archivo infectado durante el escaneo.
+$ sudo clamscan -r --bell /home
+
+#############################
+ROOTKITS
+
+
+Para identificar rootkits tenemos a RKHunter, otro programa open source con licencia GPL que nos permite descargar su base de datos y realizar analisis de rootkits, backdors y exploits locales mediante la comparación de sus hashes MD5.
+
+Instalación:
+
+sudo apt-get install rkhunter
+
+Para actualizar la base de datos:
+
+sudo rkhunter --propupd
+
+En la manpage de rkhunter recomiendan que si usamos cron para programar actualizaciones automáticas de la base de datos también añadamos el argumento --nocolors
+
+Finalmente para utilizar un análisis standard usamos:
+
+sudo rkhunter --check
+
+En este caso disponemos de un comando especial si queremos lanzar el análisis automáticamente vía cron:
+
+sudo rkhunter --cronjob
+
+Cuando usamos la opción --cronjob se asumen --check, --nocolors y --skip-keypress de forma que no nos pedira pulsar una tecla entre analisis. Dado que esta opción no contempla una salida para logs, en la manpage recomiendan usar la opción --report-warnings-only
+
+Con el resto de comandos, rkhunter guarda por defecto un registro de salida en /var/log/rkhunter.log, pero podemos modificar esto con la opción -l ARCHIVO.
