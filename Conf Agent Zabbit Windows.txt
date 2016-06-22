@@ -1,0 +1,27 @@
+Creamos un directorio en el raíz del C:
+
+c:\zabbix
+
+Dependiendo de la arquitectura de su Windows "32 o 64 bits" seleccionamos del archivo ZIP en el directorio BIN los siguientes 3 archivos y lo copiamos en el directorio c:\zabbix 
+
+zabbix_agentd.exe
+zabbix_get.exe
+zabbix_sender.exe
+
+Creamos o modificamos en ese mismo directorio "c:\zabbix" con NOTEPAD un arhivo con nombre zabbix_agentd.conf
+
+Copiamos las siguientes lineas y modificamos según las indicaciones con flechas.  NOTA:  no dejas espacios después de "="
+
+LogFile=c:\zabbix\zabbix_agentd.log - linea 23
+Server=       <-----  IP del "Servidor Zabbix" - linea 84
+ServerActive=       <-----  IP del "Servidor Zabbix" - linea 127
+Hostname=        <-----  Nombre de la máquina donde esta instalando el Agente de Zabbix - linea 138
+ListenIP=        <-----  La IP de la máquina donde esta instalando el Agente de Zabbix - linea 102
+
+Luego desde en Command Line o promt de DOS ejecutamos:
+
+"c:\zabbix\zabbix_agentd.exe" -c "c:\zabbix\zabbix_agentd.conf" -i
+
+"c:\zabbix\zabbix_agentd.exe" -c "c:\zabbix\zabbix_agentd.conf" -s
+
+Finalizado, instalación de agente Zabbix en Cualquier Windows
