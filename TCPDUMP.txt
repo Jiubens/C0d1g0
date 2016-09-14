@@ -1,0 +1,16 @@
+ejemplo el puerto TCP 80 para capturar tráfico HTTP:
+
+# tcpdump -i eth0 tcp port 80
+
+O el tráfico DNS por el puerto UDP 53:
+
+# tcpdump -i eth0 udp port 53
+
+
+Al igual que existe IP/host de origen, existe de destino, el parámetro es “dst“. En este ejemplo usamos el condicional “or” en lugar de “and”, de modo que para que se capture tráfico, o viene por el puerto 80 TCP o tiene destino la IP 192.168.1.100 (sea cual sea el puerto y protocolo):
+
+# tcpdump -i eth0 tcp port 80 and dst 192.168.1.100
+
+Especificamos todavía más, capturamos el tráfico TCP por el puerto 80, pero sólo visualizamos el tráfico originado desde la IP 192.168.1.100. Para ello usamos el parámetro “src“. Como estamos utilizando más de un parámetro, debemos comenzar a añadir condicionales (and|or). El siguiente ejemplo captura el tráfico que cumple las dos condiciones, puerto TCP 80 y origen IP 192.168.1.100:
+
+# tcpdump -i eth0 tcp port 80 and src 192.168.1.100
