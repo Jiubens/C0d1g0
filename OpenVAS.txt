@@ -5,3 +5,6 @@ openvas-scapdata-sync
 openvas-certdata-sync
 /etc/init.d/openvas-scanner restart
 perl /usr/share/ossim/scripts/vulnmeter/updateplugins.pl migrate
+
+OpenVAS eb KALI
+https://www.kali.org/penetration-testing/openvas-vulnerability-scanning/
