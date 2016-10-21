@@ -1,0 +1,7 @@
+
+SET dia=%Date:~0,2%-%Date:~3,2%-%Date:~6,4%
+REM para utilizar dia = %dia%
+
+DEL C:\Resp_Date\FILESERVER\*.* /Q
+
+Echo “Respaldo realizado” >> C:\Resp_Date\FILESERVER\Respaldo%dia%.log
