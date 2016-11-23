@@ -1,0 +1,3 @@
+script de instalcion de ELK - funciona
+https://github.com/darlenew/data2elk
+
