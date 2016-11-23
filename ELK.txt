@@ -1,3 +1,42 @@
 script de instalcion de ELK - funciona
 https://github.com/darlenew/data2elk
 
+-----------
+Servicios: 
+service logstash restart
+service elasticksearch restart
+service kibana restart
+
+En el cliente si instalamos filebeat
+Servicio: 
+service filebeat restart
+----------------- 
+para revisar errores en configuracion de archivos .conf en /etc/logstash/conf.d/*
+
+1° reiniciar servicio logstash
+services logstash restart
+
+2° verificar de desde /opt/logstash/bin con este comando 
+/opt/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf --verbose
+En este caso tenemos un archivo con nombre "logstash.conf" con los input, filter, output
+
+"realizarlo con 2 trerminales abiertas"
+-----------------
+Ejemplo de archivo de configuracion de filebeat en equipo cliente 
+
+filebeat.prospectors:
+
+- input_type: log
+
+  paths:
+    - /var/log/apache2/access.log
+    - /var/log/auth.log
+output:
+  logstash:
+    hosts: ["10.22.34.49:5044"]
+    index: "log"
+
+logging:
+  level: info
+-----------------------------------------------
+ejemplo de configuracion 
