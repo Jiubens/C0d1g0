@@ -17,7 +17,7 @@ para revisar errores en configuracion de archivos .conf en /etc/logstash/conf.d/
 services logstash restart
 
 2° verificar de desde /opt/logstash/bin con este comando 
-/opt/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf --verbose
+/opt/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf --verbose O --configtest
 En este caso tenemos un archivo con nombre "logstash.conf" con los input, filter, output
 
 "realizarlo con 2 trerminales abiertas"
