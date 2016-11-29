@@ -28,3 +28,38 @@ cd ossec-hids-2.8.3.tar.gz
 ./install.sh
 
 3°
+--------------------
+instalacion de ossec-wui - Entorno grafico
+
+instalar
+apt-get install mysql-server libmysqlclient-dev mysql-client apache2 php5 libapache2-mod-php5 php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl apache2-utils
+
+
+
+descargar desde http://ossec.github.io/downloads.html
+
+descomprimir en /var/www/html/ossec
+
+cd /var/www/html/ossec 
+./setup.sh
+
+definir apache2
+
+reiniciar apache 
+
+permisos 755 a carpeta ossec
+
+usermod -a -G ossec www-data
+
+cat /etc/group |grep ossec
+
+ossec:x:113:apache2,www-data
+
+esto esta en /etc/group con car o nano para ver
+
+
+
+
+
+
+
