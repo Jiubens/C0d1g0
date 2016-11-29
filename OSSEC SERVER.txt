@@ -1,0 +1,21 @@
+Instalacion de OSSEC-HIDS-SERVER
+
+1° 
+apt-get install build-essential inotify-tools
+2°
+Install the apt-get repository key:
+
+# apt-key adv --fetch-keys http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key
+Add the repository for Debian (available distributions are Sid, Jessie and Wheezy):
+
+# echo 'deb http://ossec.wazuh.com/repos/apt/debian wheezy main' >> /etc/apt/sources.list
+Or add the repository for Ubuntu (available distributions are Precise, Trusty and Utopic):
+
+# echo 'deb http://ossec.wazuh.com/repos/apt/ubuntu precise main' >> /etc/apt/sources.list
+Update the repository:
+
+Install OSSEC HIDS server/manager:
+
+# apt-get install ossec-hids
+
+3°
