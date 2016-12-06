@@ -1,1 +1,14 @@
 ICINGA
+
+instalacion:
+# add-apt-repository ppa:formorer/icinga
+# apt-get update
+# apt-get install icinga icinga-doc icinga-idoutils mysql-server libdbd-mysql mysql-client
+Plugin Nagios
+# apt-get install nagios-plugins
+---------------
+http://ip_del_servidor/icinga
+
+icingaadmin/password
+
+la password fue configurada durante la instalacion igual que la de mysql
