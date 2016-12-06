@@ -57,6 +57,11 @@ en esta consulta del campo EMAIL de digo que cuente desde el segundo digito, has
 
 Esta consulta es la misma que la primera 
 SELECT MID( LEFT( EMAIL, LOCATE(  '@', EMAIL ) -1 ) , 2, LENGTH( LEFT( EMAIL, LOCATE(  '@', EMAIL ) -1 ) ) ) FROM usuario
--------------------------------------------------------------
 
-UPDATE usuario SET `APELLIDO` = SELECT MID(  `EMAIL` , 2, LOCATE(  '@',  `EMAIL` ) -2 ) FROM usuario
+UPDATE usuario SET `APELLIDO` =  MID(  `EMAIL` , 2, LOCATE(  '@',  `EMAIL` ) -2 ) 
+Actualizamos la tabla apellido con la consulta que realizamos
+-------------------------------------------------------------
+SELECT usuario.nombre, EQUIPO.MODELO, USR_EQP.fecha
+FROM usuario
+INNER JOIN USR_EQP ON usuario.ID = USR_EQP.Id_USR
+INNER JOIN EQUIPO ON USR_EQP.ID_EQP = EQUIPO.ID
