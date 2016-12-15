@@ -1,4 +1,18 @@
 un plugin para elasticsearch 
 http://mobz.github.io/elasticsearch-head/
 muy bueno para gestion de nodos y cluster
+
+root@srv-log:/usr/share/elasticsearch/bin# ./plugin install mobz/elasticsearch-head
+
+
+http://10.22.34.49:9200/_plugin/head/
 -----------------------------------
+respaldar nuestro index elasticsearch
+https://github.com/dasrecht/elasticsearch-logstash-index-mgmt
+
+----------------------------
+Curator gestion de index
+https://github.com/elastic/curator
+
+pip install elasticsearch-curator
+-----------------
