@@ -1,0 +1,4 @@
+instalacion de Postfix correo en ubuntu 14.04.5 X64 server
+--------------------------
+sudo apt-get install postfix mailutils libsasl2-2 ca-certificates libsasl2-modules
+--------------------------

@@ -1,0 +1,23 @@
+Monitorix desde repositorios
+
+add a line to your /etc/apt/sources.list:
+
+deb http://apt.izzysoft.de/ubuntu generic universe
+
+--------
+wget http://apt.izzysoft.de/izzysoft.asc
+
+
+sudo apt-key add izzysoft.asc
+
+
+sudo apt-get update
+
+Installing Monitorix
+
+sudo apt-get -y install monitorix apache2-utils
+
+Configuracion
+--------
+sudo nano /etc/monitorix/monitorix.conf
+

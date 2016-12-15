@@ -1,0 +1,4 @@
+un plugin para elasticsearch 
+http://mobz.github.io/elasticsearch-head/
+muy bueno para gestion de nodos y cluster
+-----------------------------------

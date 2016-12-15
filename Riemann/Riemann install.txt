@@ -1,0 +1,31 @@
+root@srv-log:~# wget https://github.com/riemann/riemann/releases/download/0.2.12/riemann_0.2.12_all.deb
+root@srv-log:~# dpkg -i riemann_0.2.12_all.deb 
+
+edita /etc/riemann/riemann.config (o donde lo pones). Agregue esto a la parte inferior:
+-------------
+(def email(mailer { :from "riemann@example.com" :host "localhost"}))
+(def tell-ops(rollup 3 3600 (email "you@yourdomain.com")))
+ 
+(streams
+(where (state "404") tell-ops)
+)
+
+----------------------
+en el archivo de /etc/logstash/config/algo.conf 
+
+en el output
+ponemos la siguiente linea
+------
+riemann {
+    riemann_event =>  [
+                        "service", "My Awesome Logs",
+                        "state", "%{status}",
+                        "description", "%{request}"
+                      ]
+  }
+------
+
+
+---------
+service riemann restart
+service logstash reload

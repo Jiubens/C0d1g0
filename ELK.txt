@@ -54,4 +54,5 @@ beats {
 }
 
 -----------------------------------------------
-ejemplo de configuracion 
+una buena guia de filebeat
+http://www.gilesorr.com/blog/elkbeats-beats-insecure.html
