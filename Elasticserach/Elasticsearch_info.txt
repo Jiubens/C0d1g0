@@ -16,3 +16,7 @@ https://github.com/elastic/curator
 
 pip install elasticsearch-curator
 -----------------
+kopf 
+cluster
+
+https://github.com/lmenezes/elasticsearch-kopf

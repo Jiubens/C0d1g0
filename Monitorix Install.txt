@@ -21,3 +21,7 @@ Configuracion
 --------
 sudo nano /etc/monitorix/monitorix.conf
 
+---------
+
+sudo service monitorix restart
+
