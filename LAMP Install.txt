@@ -1,0 +1,18 @@
+Una forma muy facil de instalar LAMP en Debian/Ubuntu
+
+
+If your server system: Debian/Ubuntu
+
+apt-get -y install wget screen unzip
+wget --no-check-certificate -O lamp.zip https://github.com/teddysun/lamp/archive/master.zip
+unzip lamp.zip
+cd lamp-master
+chmod +x *.sh
+screen -S lamp
+./lamp.sh
+
+------------------------------------------
+
+Toda la info 
+
+https://github.com/teddysun/lamp
