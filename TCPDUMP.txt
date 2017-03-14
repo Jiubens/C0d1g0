@@ -1,16 +1,19 @@
-ejemplo el puerto TCP 80 para capturar tr·fico HTTP:
+ejemplo el puerto TCP 80 para capturar tr√°fico HTTP:
 
 # tcpdump -i eth0 tcp port 80
 
-O el tr·fico DNS por el puerto UDP 53:
+O el tr√°fico DNS por el puerto UDP 53:
 
 # tcpdump -i eth0 udp port 53
 
 
-Al igual que existe IP/host de origen, existe de destino, el par·metro es ìdstì. En este ejemplo usamos el condicional ìorî en lugar de ìandî, de modo que para que se capture tr·fico, o viene por el puerto 80 TCP o tiene destino la IP 192.168.1.100 (sea cual sea el puerto y protocolo):
+Al igual que existe IP/host de origen, existe de destino, el par√°metro es ‚Äúdst‚Äú. En este ejemplo usamos el condicional ‚Äúor‚Äù en lugar de ‚Äúand‚Äù, de modo que para que se capture tr√°fico, o viene por el puerto 80 TCP o tiene destino la IP 192.168.1.100 (sea cual sea el puerto y protocolo):
 
 # tcpdump -i eth0 tcp port 80 and dst 192.168.1.100
 
-Especificamos todavÌa m·s, capturamos el tr·fico TCP por el puerto 80, pero sÛlo visualizamos el tr·fico originado desde la IP 192.168.1.100. Para ello usamos el par·metro ìsrcì. Como estamos utilizando m·s de un par·metro, debemos comenzar a aÒadir condicionales (and|or). El siguiente ejemplo captura el tr·fico que cumple las dos condiciones, puerto TCP 80 y origen IP 192.168.1.100:
+Especificamos todav√≠a m√°s, capturamos el tr√°fico TCP por el puerto 80, pero s√≥lo visualizamos el tr√°fico originado desde la IP 192.168.1.100. Para ello usamos el par√°metro ‚Äúsrc‚Äú. Como estamos utilizando m√°s de un par√°metro, debemos comenzar a a√±adir condicionales (and|or). El siguiente ejemplo captura el tr√°fico que cumple las dos condiciones, puerto TCP 80 y origen IP 192.168.1.100:
 
 # tcpdump -i eth0 tcp port 80 and src 192.168.1.100
+
+
+SRV-SECURITY:~# tcpdump -i eth0 udp port 514  and src 10.22.55.18
