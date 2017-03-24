@@ -7,3 +7,8 @@ awk '{ print $7 }'   imprimimos solo la 7a columna
 sort Obvio
 uniq -c  imprime solo una linea por repetidos pero ademas los contara
 grep -v "^ *[1-9] "  filtra -descarta- los que comiencen con 1,2,3,etc. hasta 9
+
+
+En el caso de latitud 90 
+
+tcpdump -i eth1 -n net 10.22.34.0/23 | head -2000 | grep "who-has" | awk '{ print $7 }'| sort | uniq -c | grep -v "^ *[1-9] "
