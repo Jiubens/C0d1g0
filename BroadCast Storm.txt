@@ -1,0 +1,9 @@
+$sudo tcpdump -i eth0 -n net 192.168.0.0/23 | head -100 | egrep "who-has" | awk '{ print $7 }' | sort | uniq -c| grep -v "^ *[1-9] "
+
+$sudo tcpdump -i eth0 -n net 192.168.0.0/23 Executamos tcpdump con permisos de superusuario, le indicamos que debera usar la interfaz eth0 y escuchar en la red 192.168.0.0/23
+head -300 la cantidad de la muestra de paquetes que sacara el tcpdump
+egrep "who-has"   filtramos unicamente las lineas que contengan who-has
+awk '{ print $7 }'   imprimimos solo la 7a columna
+sort Obvio
+uniq -c  imprime solo una linea por repetidos pero ademas los contara
+grep -v "^ *[1-9] "  filtra -descarta- los que comiencen con 1,2,3,etc. hasta 9
