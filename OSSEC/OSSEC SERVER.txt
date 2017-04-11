@@ -18,16 +18,22 @@ Install OSSEC HIDS server/manager:
 
 # apt-get install ossec-hids
 -------
+
+
 tambien desde paquete tar.gz
+
+Se recomienda antes 
+
+apt-get install build-essential
 
 http://ossec.github.io/downloads.html
 
 wget https://bintray.com/artifact/download/ossec/ossec-hids/ossec-hids-2.8.3.tar.gz
 tar -zxf ossec-hids-2.8.3.tar.gz
-cd ossec-hids-2.8.3.tar.gz
+cd ossec-hids-2.8.3
 ./install.sh
 
-3°
+
 --------------------
 instalacion de ossec-wui - Entorno grafico
 
