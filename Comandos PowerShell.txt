@@ -1,11 +1,11 @@
-Hay una forma simple de ver qué cuentas no se han estado utilizando desde hace algún tiempo.
+Hay una forma simple de ver quÃ© cuentas no se han estado utilizando desde hace algÃºn tiempo.
 
 dsquery user -inactive 2 -limit 0
 
-Ejecutando ese comando, podemos ver qué usuarios no han registrado actividad las últimas dos semanas, el limite indica la cantidad de resultados que queremos ver, donde cero significa "sin límite".
-Podemos ejecutar este comando utilizando pipes para combinarlo con otros y realizar alguna acción. O enviarlo a un archivo de texto con >
+Ejecutando ese comando, podemos ver quÃ© usuarios no han registrado actividad las Ãºltimas dos semanas, el limite indica la cantidad de resultados que queremos ver, donde cero significa "sin lÃ­mite".
+Podemos ejecutar este comando utilizando pipes para combinarlo con otros y realizar alguna acciÃ³n. O enviarlo a un archivo de texto con >
 
-Para pasar la información a un archivo de texto:
+Para pasar la informaciÃ³n a un archivo de texto:
 dsquery user -inactive 2 -limit 0 > c:\Users\edeleo\Desktop\Users.txt
 
 Para mover los usuarios inactivos a otra OU:
@@ -17,6 +17,10 @@ dsquery user -inactive 2 -limit 0 dsmod user -disabled yes
 Para borrar usuarios de cierta OU:
 dsquery user "OU=Para borrar,DC=Labemd,DC= NET" dsrm
 
-Las combinaciones son muchas y no están limitadas a estos ejemplos. También es muy útil utilizar "dsquery computer" para buscar equipos inactivos que no cambiaron su password o que tienen cuentas deshabilitadas, como se muestra en el ejemplo:
+Las combinaciones son muchas y no estÃ¡n limitadas a estos ejemplos. TambiÃ©n es muy Ãºtil utilizar "dsquery computer" para buscar equipos inactivos que no cambiaron su password o que tienen cuentas deshabilitadas, como se muestra en el ejemplo:
 
 dsquery computer -disabled
+
+----------------
+Ejemplos
+https://ss64.com/nt/dsquery-user.html
