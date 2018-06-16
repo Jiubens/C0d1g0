@@ -1,0 +1,16 @@
+exportar bbdd
+mysqldump -uUSERNAME -pPASSWORD -hHOSTNAME USER_DATABASE > FILENAME.sql
+
+importar bbdd
+Lo primero es conectarnos a la base de datos con el siguiente comando.
+
+mysql -u <username> -p <database>
+Donde remplazas <username> por tu nombre de usuario y <database> por el nombre de la base de datos (vacía) en la que vas a importar tu backup. Entonces se te pedirá el password.
+
+Una vez dentro ejecutas el siguiente comando
+
+source <database.sql>
+source /ruta/de/archivo/FILENAME.sql
+
+otra forma es 
+mysql -uUSERNAME -pPASSWORD -hHOSTNAME USER_DATABASE < FILENAME.sql
