@@ -1,0 +1,33 @@
+---
+- name: Actualizaciones automagicas
+  hosts: buap
+  become: yes
+  ignore_errors: yes
+  gather_facts: yes
+  tasks:
+    - name: instalando  yum cron
+      shell: sudo yum install -y --nogpgcheck yum-cron
+      when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "7") or (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "7")
+    - name: dejando activo yum-cron
+      shell: sudo systemctl enable yum-cron
+      when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "7") or (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "7")
+    - name: iniciando yum-cron
+      shell: sudo systemctl start yum-cron
+      when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "7") or (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "7")
+    - name: haciendo un restart a yum-cron
+      shell: sudo systemctl restart yum-cron
+      when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "7") or (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "7")
+    - name: copiando configuracion
+      copy: src=/etc/ansible/config/general/yum-cron.conf dest=/etc/yum/
+      when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "7") or (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "7")
+###INSTALANDO DNF-AUTOMATIC
+    - name: instalando  dnf-automatic
+      shell: sudo yum install -y --nogpgcheck dnf-automatic
+      when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "8") or (ansible_facts['distribution'] == "Rocky") or (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+    - name: dejando activo dnf-automatic
+      shell: systemctl enable --now dnf-automatic.timer
+      when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "8") or (ansible_facts['distribution'] == "Rocky") or (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+    - name: copiando configuracion
+      copy: src=/etc/ansible/config/general/automatic.conf dest=/etc/dnf/
+      when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "8") or (ansible_facts['distribution'] == "Rocky") or (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+...
