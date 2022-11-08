@@ -1,6 +1,6 @@
 ---
 - name: Copia o Descarga de key MariaDB
-  hosts: emprove02:emprove03:idb01:idb02:idb03:mindfree01:ucsc:usarboleda01
+  hosts: 
   become: yes
   ignore_errors: yes
   gather_facts: yes

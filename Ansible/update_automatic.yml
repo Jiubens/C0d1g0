@@ -1,6 +1,6 @@
 ---
 - name: Actualizaciones automagicas
-  hosts: buap
+  hosts: 
   become: yes
   ignore_errors: yes
   gather_facts: yes
