@@ -1,0 +1,23 @@
+---
+- name: Copia o Descarga de key MariaDB
+  hosts: emprove02:emprove03:idb01:idb02:idb03:mindfree01:ucsc:usarboleda01
+  become: yes
+  ignore_errors: yes
+  gather_facts: yes
+  tasks:
+    - name: Copia o descarga de MariaDB Server
+      #      shell: sudo wget https://supplychain.mariadb.com/MariaDB-Server-GPG-KEY -O /etc/pki/rpm-gpg/MariaDB-Server-GPG-KEY
+      copy:
+        src: /etc/ansible/config/general/MariaDB/MariaDB-Server-GPG-KEY
+        dest: /etc/pki/rpm-gpg/
+    - name: Copia o Descarga de MariaDB Maxscale
+      #      shell: sudo wget https://supplychain.mariadb.com/MariaDB-MaxScale-GPG-KEY -O /etc/pki/rpm-gpg/MariaDB-MaxScale-GPG-KEY
+      copy:
+        src: /etc/ansible/config/general/MariaDB/MariaDB-MaxScale-GPG-KEY
+        dest: /etc/pki/rpm-gpg/
+    - name: Copia de Descarga de MariaDB Enterprise
+      #      shell: sudo wget https://supplychain.mariadb.com/MariaDB-Enterprise-GPG-KEY -O /etc/pki/rpm-gpg/MariaDB-Enterprise-GPG-KEY
+      copy:
+        src: /etc/ansible/config/general/MariaDB/MariaDB-Enterprise-GPG-KEY
+        dest: /etc/pki/rpm-gpg/
+...
