@@ -1,0 +1,10 @@
+##### Alias #####
+alias log="bash /home/ruben.pedreros/Config-all/log.sh"
+alias cron="bash /home/ruben.pedreros/Config-all/cron.sh"
+alias toop="bash /home/ruben.pedreros/Config-all/toop.sh"
+alias event="bash /home/ruben.pedreros/Config-all/event.sh"
+alias wide="bash /home/ruben.pedreros/Config-all/wide.sh"
+alias srv="bash /home/ruben.pedreros/Config-all/srv.sh"
+alias full="bash /home/ruben.pedreros/Config-all/full.sh"
+alias log_full="bash /home/ruben.pedreros/Config-all/log_full.sh"
+alias node.carga="bash /home/ruben.pedreros/Config-all/carga_nodo.sh"
